@@ -1,0 +1,51 @@
+body {
+    text-align: center;
+    background-color: lightcyan;
+    font-size: 25px;
+}
+
+h1 {
+    color: darkgreen;
+    font-size: 30px;
+}
+
+.laInfo{
+    display: flex;
+    flex-flow: column nowrap;    
+    justify-content: center;
+}
+
+table {
+    width: 500px;
+    margin: 20px auto;
+    padding: 5px auto;
+    border: 2px solid;
+}
+
+input {
+    margin: 5px;
+    padding: 5px;
+    background-color: white;
+}
+
+textArea {
+    width: 500px;
+    height: 100px;
+    padding: 5px auto;
+}
+
+.error {
+    color: red;
+}
+
+.datos_entrada {    
+    background-color: #6ee290;
+}
+
+
+button {
+    width:100px;
+    height: 40px;
+    margin: 10px;
+}
+
