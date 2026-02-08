@@ -6,55 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Styles/main.css">
     <script type="module" src="Scripts/main.js"></script>
-    <title>FrontEnd Estatico</title>
+    <title>Calculadora de Cuota Mensual</title>
 </head>
 <body>
     <head>
-        <h1>Ejemplos de FrontEnd Dinámico</h1>
+        <h1>Calculadora de Cuota Mensual</h1>
     </head>
     <main>
         <section class="laInfo">
             <div>
                 <table class="datos_entrada">
-                    <caption>Datos Personales</caption>  
+                    <caption>Ingrese los siguientes datos</caption>  
                     <tr>
                         <td>Nombre</td>
                         <td>
-                            <input type="text" value="" id="elNombre" name="nombre" placeholder="Escribe tu nombre">
+                            <input type="text" value="" id="elNombre" name="nombre" placeholder="Ingresa el nombre">
                         </td>
                     </tr>  
                     <tr>
-                        <td>Edad</td>
+                        <td>Préstamo</td>
                         <td>
                             <!-- pudo ser de tipo number -->
-                            <input type="number" value="" id="laEdad" placeholder="Escriba la edad">
+                            <input type="number" value="" id="prestamo" placeholder="Ingrese la Cantidad">
                         </td>
                     </tr>                     
                     <tr>
-                        <td>Peso</td>
+                        <td>Meses</td>
                         <td>
                             <!-- pudo ser de tipo number -->
-                            <input type="number" value="" id="elPeso" placeholder="Digita tu peso en kg">
+                            <input type="number" value="" id="meses" placeholder="Selecione la Cantidad">
                         </td>
                     </tr> 
                     <tr>
-                        <td>Ciudad Residencia</td>
+                        <td>Interés</td>
                         <td>
-                            <select id="laResidencia">
-                                <option value="Cali" selected>Cali es Cali</option><!-- Opción por defecto -->
-                                <option value="Yumbo">Yumbo City</option> 
-                                <option value="Palmira">Palmira Señorial</option> 
-                                <option value="Jamundi">Jamundi Bella</option>                         
-                            </select>  
-                        </td>
-                    <tr>
-                        <td>Género</td>
-                        <td>
-                            <input type="radio" id="generoM" name="genero" value="Masculino" checked>
-                            <label for="generoM">Masculino</label>
-                            <input type="radio" id="generoF" name="genero" value="Femenino">
-                            <label for="generoF">Femenino</label> 
-                        </td>                         
+                            <input type="number" value="" step="0.01" id="intereses" placeholder="Selecione la cantidad">  
+                        </td>                       
                 </table>
             </div>
             <div class="error" id="error"></div>
@@ -62,15 +49,16 @@
                 <textarea id="laRespuesta" readonly>Salida---</textarea>
             </div>
             <div>
-                <button id="ejecutar">Procesar</button> 
-                <button id="recordar">Ver historial</button>
+                <button id="calcular">Calcular y guardar</button> 
+                <button id="historial">Ver historial</button>
+                <button id="reportes">Generar reportes</button>
             </div>
         </section>
         <hr>
     </main>
     <footer>
         <div class="coloreado">
-            Creado por el profesor Orlando Arboleda, para el curso de EDyA1 en el Universidad Autónoma de
+            Creado por los estudiantes .... para el curso de EDyA1 en el Universidad Autónoma de
                 Occidente
         </div>
     </footer>     
