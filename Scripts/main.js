@@ -7,42 +7,40 @@
 *  para el curso de EDyA1 en la Universidad Autónoma de Occidente
 */
 
-import {armarInformacion} from './funciones.js';
+document.addEventListener("DOMContentLoaded", () => {
 
-const btnEjecutar = document.getElementById("ejecutar");
-const btnRecordar = document.getElementById("recordar");
+    document.getElementById("calcular").addEventListener("click", calcularYGuardar);
+    document.getElementById("historial").addEventListener("click", verHistorial);
+    document.getElementById("reportes").addEventListener("click", generarReporte);
 
-btnEjecutar.addEventListener('click',ingresarPersona)
-btnRecordar.addEventListener('click',desplegarTodos)
+});
 
-let info = ''
+let historial = [];
 
-let tARespuesta = document.getElementById("laRespuesta");
+function calcularYGuardar() {
+    const nombre = document.getElementById("elNombre").value;
+    const prestamo = document.getElementById("prestamo").value;
+    const meses = document.getElementById("meses").value;
+    const interes = document.getElementById("intereses").value;
 
-function ingresarPersona(){
-    let nombre = document.getElementById("elNombre").value;   
-    let edad = parseInt(document.getElementById("laEdad").value);
-    let peso = parseFloat(document.getElementById("elPeso").value);
-    let residencia = document.getElementById("laResidencia").value;
-    let res
+    const resultado =
+`Nombre: ${nombre}
+Préstamo: ${prestamo}
+Meses: ${meses}
+Interés: ${interes}`;
 
-    if (nombre.length==0 || isNaN(edad) || isNaN(peso)){
-        res = 'El nombre, edad o peso, no fueron ingresados o tienen valores de entrada errados'
-
-        document.getElementById("error").innerHTML = res;
-        console.log(res);
-
-    }else{
-        document.getElementById("error").innerHTML = "";
-        res = armarInformacion(nombre, edad, peso, residencia)
-        info +=  res +'\n'; 
-        tARespuesta.textContent = res   
-    }
-
-    
+    historial.push(resultado);
+    document.getElementById("laRespuesta").value = resultado;
 }
 
-function desplegarTodos()
-{
-    tARespuesta.textContent = info;
+function verHistorial() {
+    document.getElementById("laRespuesta").value =
+        historial.length > 0 ? historial.join("\n\n") : "no existen datos guardados";
 }
+
+function generarReporte() {
+    document.getElementById("laRespuesta").value =
+        "Reporte generado correctamente";
+}
+
+
