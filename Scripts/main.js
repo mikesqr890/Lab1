@@ -106,7 +106,7 @@ function verHistorial() {
     const textoHistorial = formatearArregloObjetos(historial);
     
     // Agregar información de sumatoria al final
-    const resumen = `\n\n${'='.repeat(50)}\n📊 RESUMEN TOTAL\n${'='.repeat(50)}\nTotal de préstamos: ${historial.length}\nSUMATORIA TOTAL DE CUOTAS MENSUAL: $${sumatoriaTotalCuotas.toFixed(2)}\n(Monto mensual que pagará el cliente con intereses)`;
+    const resumen = `\n\n${'='.repeat(50)}\n📊 RESUMEN TOTAL\n${'='.repeat(50)}\nTotal de préstamos: ${historial.length}\nSUMATORIA TOTAL DE CUOTAS MENSUAL: $${sumatoriaTotalCuotas.toFixed(2)}\n(Monto mensual que pagarán los clientes con intereses)`;
     
     document.getElementById("laRespuesta").value = `=== HISTORIAL DE PRÉSTAMOS ===\n\n${textoHistorial}${resumen}`;
 }
