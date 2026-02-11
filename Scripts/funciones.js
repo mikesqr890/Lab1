@@ -45,7 +45,7 @@ function incrementarCuotas(historial) {
 // g) Decrementar préstamos en $90000 (solo préstamos >= $90,000)
 function decrementarPrestamos(historial) {
     return historial
-        .filter(obj => obj.prestamo >= 90000)  // Solo préstamos que puedan soportar el decremento
+        .filter(obj => obj.prestamo >= 90000)  
         .map(obj => ({
             ...obj,
             prestamo: obj.prestamo - 90000

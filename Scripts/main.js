@@ -119,11 +119,11 @@ function generarReporte() {
 
     let reporte = "=== REPORTES ===\n\n";
 
-    // a) Sumatoria de cada cuota
+    // Sumatoria de cada cuota
     const sumatoria = sumatoriasCuotas(historial);
     reporte += `a) SUMATORIA DE CUOTAS: $${sumatoria.toFixed(2)}\n\n`;
 
-    // b) Cuotas mayores a 300000
+    // Cuotas mayores a 300000
     const cuotasMayores = cuotasMayores300000(historial);
     reporte += `b) CUOTAS MAYORES A $300,000 (${cuotasMayores.length} encontrados):\n`;
     if (cuotasMayores.length > 0) {
@@ -132,7 +132,7 @@ function generarReporte() {
         reporte += "No hay cuotas mayores a $300,000\n\n";
     }
 
-    // c) Pagos en menos de un año
+    // Pagos en menos de un año
     const pagosMenores12 = pagosMenosDeUnAnio(historial);
     reporte += `c) PRÉSTAMOS A MENOS DE 12 MESES (${pagosMenores12.length} encontrados):\n`;
     if (pagosMenores12.length > 0) {
@@ -141,7 +141,7 @@ function generarReporte() {
         reporte += "No hay préstamos a menos de 12 meses\n\n";
     }
 
-    // d) Primer préstamo mayor a 5000000
+    // Primer préstamo mayor a 5000000
     const prestamoMayor5M = prestamoMayorA5M(historial);
     reporte += `d) PRIMER PRÉSTAMO MAYOR A $5,000,000:\n`;
     if (prestamoMayor5M) {
@@ -150,7 +150,7 @@ function generarReporte() {
         reporte += "No hay préstamos mayores a $5,000,000\n\n";
     }
 
-    // e) Primer interés inferior a 2%
+    // Primer interés inferior a 2%
     const interesInferior = interesInferiorA2(historial);
     reporte += `e) PRIMER INTERÉS INFERIOR A 2%:\n`;
     if (interesInferior) {
@@ -159,12 +159,12 @@ function generarReporte() {
         reporte += "No hay intereses inferiores a 2%\n\n";
     }
 
-    // f) Incrementar cuotas en $90000
+    // Incrementar cuotas en $90000
     const cuotasIncrementadas = incrementarCuotas(historial);
     reporte += `f) CUOTAS INCREMENTADAS EN $90,000:\n`;
     reporte += formatearArregloObjetos(cuotasIncrementadas) + "\n\n";
 
-    // g) Decrementar préstamos en $90000
+    // Decrementar préstamos en $90000
     const prestamosDecrementados = decrementarPrestamos(historial);
     reporte += `g) PRÉSTAMOS DECREMENTADOS EN $90,000 (Solo préstamos >= $90,000):\n`;
     reporte += `(${prestamosDecrementados.length} de ${historial.length} préstamos cumplen la condición)\n`;
@@ -174,14 +174,14 @@ function generarReporte() {
         reporte += "No hay préstamos >= $90,000 para decrementar\n\n";
     }
 
-    // h) Arreglo solo con cuotas
+    // Arreglo solo con cuotas
     const soloCuotas = obtenerSoloCuotas(historial);
     reporte += `h) SOLO CUOTAS:\n`;
     reporte += soloCuotas.map(c => `$${c.toFixed(2)}`).join(', ');
     
     reporte += '\n\n';
     
-    // i) Total a pagar por cada préstamo (cuota * meses)
+    // Total a pagar por cada préstamo (cuota * meses)
     const totalesAPagar = calcularTotalAPagar(historial);
     const sumatoriaTotal = sumatoriaTotalesAPagar(historial);
     reporte += `i) TOTAL A PAGAR POR CADA PRÉSTAMO (Cuota × Meses):\n`;
