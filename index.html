@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,9 +9,9 @@
     <title>Calculadora de Cuota Mensual</title>
 </head>
 <body>
-    <head>
+    <header>
         <h1>Calculadora de Cuota Mensual</h1>
-    </head>
+    </header>
     <main>
         <section class="laInfo">
             <div>
@@ -26,40 +26,41 @@
                     <tr>
                         <td>Préstamo</td>
                         <td>
-                            <!-- pudo ser de tipo number -->
                             <input type="number" value="" id="prestamo" placeholder="Ingrese la Cantidad">
                         </td>
                     </tr>                     
                     <tr>
                         <td>Meses</td>
                         <td>
-                            <!-- pudo ser de tipo number -->
-                            <input type="number" value="" id="meses" placeholder="Selecione la Cantidad">
+                            <input type="number" value="" id="meses" placeholder="Seleccione la Cantidad">
                         </td>
                     </tr> 
                     <tr>
                         <td>Interés</td>
                         <td>
-                            <input type="number" value="" step="0.01" id="intereses" placeholder="Selecione la cantidad">  
-                        </td>                       
+                            <input type="number" value="" step="0.01" id="intereses" placeholder="Seleccione la cantidad (ej: 0.15 para 15%)">  
+                        </td>
+                    </tr>                       
                 </table>
             </div>
             <div class="error" id="error"></div>
             <div>
                 <textarea id="laRespuesta" readonly>Salida---</textarea>
             </div>
-            <div>
-                <button id="calcular">Calcular y guardar</button> 
-                <button id="historial">Ver historial</button>
-                <button id="reportes">Generar reportes</button>
+            <div class="controles">
+                <select id="accionSeleccionada">
+                    <option value="calcular">Calcular y guardar</option>
+                    <option value="historial">Ver historial</option>
+                    <option value="reportes">Generar reportes</option>
+                </select>
+                <button id="generar">Generar</button>
             </div>
         </section>
         <hr>
     </main>
     <footer>
         <div class="coloreado">
-            Creado por los estudiantes .... para el curso de EDyA1 en el Universidad Autónoma de
-                Occidente
+            Creado por los estudiantes para el curso de EDyA1 en la Universidad Autónoma de Occidente
         </div>
     </footer>     
 </body>

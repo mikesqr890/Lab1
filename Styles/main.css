@@ -2,6 +2,7 @@ body {
     text-align: center;
     background-color: lightcyan;
     font-size: 25px;
+    font-family: Arial, sans-serif;
 }
 
 h1 {
@@ -18,34 +19,118 @@ h1 {
 table {
     width: 500px;
     margin: 20px auto;
-    padding: 5px auto;
-    border: 2px solid;
+    padding: 5px;
+    border: 2px solid darkgreen;
+    border-collapse: collapse;
+}
+
+table caption {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: darkgreen;
+}
+
+table td {
+    padding: 8px;
+    border: 1px solid #2d7a4d;
 }
 
 input {
     margin: 5px;
-    padding: 5px;
+    padding: 8px;
     background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 250px;
+    font-size: 16px;
 }
 
-textArea {
-    width: 500px;
-    height: 100px;
-    padding: 5px auto;
+input:focus {
+    outline: 2px solid darkgreen;
+}
+
+textarea {
+    width: 600px;
+    height: 300px;
+    padding: 10px;
+    margin: 10px auto;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    border: 2px solid darkgreen;
+    border-radius: 4px;
+    resize: vertical;
 }
 
 .error {
     color: red;
+    font-weight: bold;
+    margin: 10px 0;
+    min-height: 20px;
 }
 
 .datos_entrada {    
     background-color: #6ee290;
 }
 
-
 button {
-    width:100px;
-    height: 40px;
+    width: 150px;
+    height: 45px;
     margin: 10px;
+    background-color: darkgreen;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
 }
 
+button:hover {
+    background-color: #2d7a4d;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+select {
+    width: 250px;
+    height: 45px;
+    margin: 10px;
+    padding: 5px 10px;
+    background-color: white;
+    color: darkgreen;
+    border: 2px solid darkgreen;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+select:focus {
+    outline: 2px solid #2d7a4d;
+}
+
+select:hover {
+    background-color: #f0f0f0;
+}
+
+.controles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+footer {
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.coloreado {
+    background-color: #6ee290;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+}
