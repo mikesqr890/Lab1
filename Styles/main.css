@@ -1,12 +1,13 @@
 body {
     text-align: center;
-    background-color: lightcyan;
+    background-color: #f3e5ff;
     font-size: 25px;
     font-family: Arial, sans-serif;
+    padding: 20px;
 }
 
 h1 {
-    color: darkgreen;
+    color: #820ad1;
     font-size: 30px;
 }
 
@@ -14,51 +15,71 @@ h1 {
     display: flex;
     flex-flow: column nowrap;    
     justify-content: center;
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(130, 10, 209, 0.15);
 }
 
 table {
     width: 500px;
     margin: 20px auto;
     padding: 5px;
-    border: 2px solid darkgreen;
+    border: 2px solid #820ad1;
     border-collapse: collapse;
+    background-color: white;
 }
 
 table caption {
     font-weight: bold;
     margin-bottom: 10px;
-    color: darkgreen;
+    color: #820ad1;
 }
 
 table td {
-    padding: 8px;
-    border: 1px solid #2d7a4d;
+    padding: 12px;
+    border: 1px solid #e9d5ff;
+    text-align: left;
 }
 
 input {
     margin: 5px;
-    padding: 8px;
+    padding: 12px 15px;
     background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 2px solid #e9d5ff;
+    border-radius: 8px;
     width: 250px;
     font-size: 16px;
+    transition: all 0.3s;
 }
 
 input:focus {
-    outline: 2px solid darkgreen;
+    outline: none;
+    border-color: #820ad1;
+    box-shadow: 0 0 0 3px rgba(130, 10, 209, 0.1);
 }
 
 textarea {
     width: 600px;
     height: 300px;
-    padding: 10px;
+    padding: 15px;
     margin: 10px auto;
     font-family: 'Courier New', monospace;
     font-size: 14px;
-    border: 2px solid darkgreen;
-    border-radius: 4px;
+    border: 2px solid #e9d5ff;
+    border-radius: 10px;
     resize: vertical;
+    background-color: #faf5ff;
+    text-align: left;
+    transition: all 0.3s;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #820ad1;
+    box-shadow: 0 0 0 3px rgba(130, 10, 209, 0.1);
 }
 
 .error {
@@ -69,51 +90,60 @@ textarea {
 }
 
 .datos_entrada {    
-    background-color: #6ee290;
-}
-
-button {
-    width: 150px;
-    height: 45px;
-    margin: 10px;
-    background-color: darkgreen;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 14px;
-    cursor: pointer;
+    background-color: #f3e5ff;
     font-weight: bold;
 }
 
+button {
+    width: 180px;
+    height: 50px;
+    margin: 15px;
+    background-color: #820ad1;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 0 2px 8px rgba(130, 10, 209, 0.3);
+}
+
 button:hover {
-    background-color: #2d7a4d;
-    transform: scale(1.05);
+    background-color: #6b0ab0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(130, 10, 209, 0.4);
 }
 
 button:active {
-    transform: scale(0.98);
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(130, 10, 209, 0.3);
 }
 
 select {
     width: 250px;
-    height: 45px;
+    height: 50px;
     margin: 10px;
-    padding: 5px 10px;
+    padding: 5px 15px;
     background-color: white;
-    color: darkgreen;
-    border: 2px solid darkgreen;
-    border-radius: 5px;
+    color: #820ad1;
+    border: 2px solid #e9d5ff;
+    border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
     font-weight: bold;
+    transition: all 0.3s;
 }
 
 select:focus {
-    outline: 2px solid #2d7a4d;
+    outline: none;
+    border-color: #820ad1;
+    box-shadow: 0 0 0 3px rgba(130, 10, 209, 0.1);
 }
 
 select:hover {
-    background-color: #f0f0f0;
+    border-color: #a855f7;
+    background-color: #faf5ff;
 }
 
 .controles {
@@ -129,8 +159,8 @@ footer {
 }
 
 .coloreado {
-    background-color: #6ee290;
-    padding: 15px;
-    border-radius: 5px;
+    background-color: #f3e5ff;
+    padding: 20px;
+    border-radius: 10px;
     font-size: 16px;
 }
