@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <h1>Calculadora de Cuota Mensual</h1>
+        <h1>Calculadora de Cotización de Envío</h1>
     </header>
     <main>
         <section class="laInfo">
@@ -24,21 +24,21 @@
                         </td>
                     </tr>  
                     <tr>
-                        <td>Préstamo</td>
+                        <td>Peso (kg)</td>
                         <td>
-                            <input type="number" value="" id="prestamo" placeholder="Ingrese la Cantidad">
+                            <input type="number" value="" id="peso" placeholder="Ingrese el peso en kg">
                         </td>
                     </tr>                     
                     <tr>
-                        <td>Meses</td>
+                        <td>Distancia (km)</td>
                         <td>
-                            <input type="number" value="" id="meses" placeholder="Seleccione la Cantidad">
+                            <input type="number" value="" id="distancia" placeholder="Ingrese la distancia en km">
                         </td>
                     </tr> 
                     <tr>
-                        <td>Interés</td>
+                        <td>Descuento</td>
                         <td>
-                            <input type="number" value="" step="0.01" id="intereses" placeholder="Seleccione la cantidad (ej: 0.15 para 15%)">  
+                            <input type="text" value="" id="descuento" placeholder="Escribe tu cupón (WEB10 o WEB20)">
                         </td>
                     </tr>                       
                 </table>
@@ -49,9 +49,7 @@
             </div>
             <div class="controles">
                 <select id="accionSeleccionada">
-                    <option value="calcular">Calcular y guardar</option>
-                    <option value="historial">Ver historial</option>
-                    <option value="reportes">Generar reportes</option>
+                    <option value="calcular">Calcular</option>
                 </select>
                 <button id="generar">Generar</button>
             </div>
@@ -60,7 +58,7 @@
     </main>
     <footer>
         <div class="coloreado">
-            Creado por los estudiantes para el curso de EDyA1 en la Universidad Autónoma de Occidente
+           Creado por Michael Steven Quimbayo Rodriguez
         </div>
     </footer>     
 </body>
